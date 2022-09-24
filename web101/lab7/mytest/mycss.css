@@ -1,0 +1,115 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  /* border: 2px solid rgb(98, 219, 98); */
+}
+body {
+  background: linear-gradient(
+    to bottom right,
+    rgb(0, 54, 54),
+    rgba(7, 71, 71, 0.356)
+  );
+  background-attachment: fixed;
+}
+.container {
+  padding-top: 50px;
+}
+.banner {
+  border-radius: 5px;
+  margin: auto;
+  width: 845px;
+  height: 469px;
+  padding: 15px;
+  /* background-image: url("bg.png"); */
+  background-color: coral;
+  background-size: contain;
+}
+.title {
+  margin-top: 4%;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0px 0px 20px black;
+}
+.title-property {
+  position: relative;
+  display: inline-block;
+}
+.title-property h1 {
+  font-weight: 800;
+}
+.title-property h3 {
+  position: absolute;
+  font-weight: 800;
+  letter-spacing: 4px; /*khoang cach chu cai*/
+  top: 40%;
+  left: 20%;
+}
+
+.event-detail {
+  margin-top: 15%;
+  text-align: right;
+  padding-right: 5%;
+  /* position: relative; */
+}
+.event-sub-title {
+  /* padding */
+  padding: 10px;
+  padding-bottom: 0px;
+}
+.event-sub-title p {
+  display: inline;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: rgb(97, 105, 150);
+}
+
+.event-title {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding-right: 20px;
+  padding-top: 5px;
+}
+.event-title p {
+  margin: 0px;
+
+  color: rgb(255, 255, 255);
+  /* text-shadow: 0px 0px 20px; */
+}
+
+/* .event-name {
+  color: rgba(152, 240, 10);
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: underline #17f 4px;
+  background-color: rgba(240, 248, 255, 0.2);
+}
+.event-detail {
+  position: relative;
+  border: 20px solid rgba(22, 255, 53, 0.1);
+}
+.event-detail::after {
+  content: "new";
+  border-radius: 5px;
+  padding: 5px;
+  padding-left: 30px;
+  font-weight: 700;
+  position: absolute;
+  right: -10px;
+  bottom: 0px;
+
+  color: greenyellow;
+  background: linear-gradient(
+    to left,
+    rgba(255, 0, 0, 0.493),
+    rgba(202, 236, 10, 0.1)
+  );
+}
+.event-detail h2 {
+  text-align: center;
+} */
