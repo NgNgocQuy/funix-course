@@ -1,0 +1,41 @@
+/* ---font-text */
+.text-upper {
+  text-transform: uppercase;
+}
+.no-decoration {
+  text-decoration: none;
+}
+.font-strong {
+  font-weight: bold;
+}
+/* --- */
+.text-indent-s {
+  text-indent: 10px;
+}
+.text-indent-m {
+  text-indent: 15px;
+}
+.text-indent-l {
+  text-indent: 20px;
+}
+/* ---color-text--------------- */
+
+.text-color-title {
+  color: #0e2452;
+}
+
+/* ---element- */
+.content-relative {
+  position: relative;
+}
+.avatar-img {
+  width: 100%;
+}
+/* --- */
+.chill-padding-content-small div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.no-margin-bottom {
+  margin-bottom: 0px;
+}

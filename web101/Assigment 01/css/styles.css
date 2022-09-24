@@ -1,35 +1,113 @@
 body {
-    margin: 0px;
+  margin: 0px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .cv-document {
-	box-sizing: border-box;
-	border: none;
-	outline: 0;
-	font-weight: inherit;
-	font-style: inherit;
-	vertical-align: baseline;
-	text-decoration: none;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	font-family: arial, sans-serif, tahoma;
-	font-size: 10pt;
+  box-sizing: border-box;
+  border: none;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: arial, sans-serif, tahoma;
+  /* font-size: 10pt; */
 }
 
 .cv-page {
-    outline: 0;
-    font-weight: inherit;
-    font-style: inherit;
-    font-size: 100%;
-    vertical-align: baseline;
-    text-decoration: none;
-    width: 900px;
-    min-height: 900px;
-    margin: 0 auto;
-    box-shadow: 0 0 1px rgba(0,0,0,.5);
-    background-color: #fff;
-    position: relative;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+  width: 900px;
+  min-height: 900px;
+  margin: 0 auto;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  background-color: #fff;
+  position: relative;
 
-    padding: 40px
+  padding: 40px;
+}
+/* --- */
+.section-title {
+  display: block;
+  border-bottom: 2px solid black;
+  text-transform: uppercase;
+}
+.section {
+  margin-bottom: 40px;
+}
+.section-content {
+}
+
+/* --- */
+.content-box {
+  border-bottom: 1px solid rgba(207, 207, 207, 0.514);
+}
+.content-box div {
+  display: inline-table;
+}
+.content-box div:first-child {
+  width: 185px;
+}
+.content-box div:last-child {
+  max-width: 70%;
+}
+
+/* --- */
+
+/* --- */
+.avatar {
+  position: absolute;
+  width: 150px;
+  right: 40px;
+  top: 60px;
+}
+.info-list div {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.info-list div:first-child {
+  width: 100px;
+  text-transform: capitalize;
+  /* text-transform: up; */
+  font-weight: bold;
+}
+/* ---timeline */
+
+.timeline {
+  position: relative;
+}
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 10px;
+  bottom: 10px;
+  left: 0%;
+  /* margin: ; */
+}
+.timeline .content-box {
+  position: relative;
+}
+.timeline .content-box::after {
+  content: " ";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  /* border: solid black; */
+  border-radius: 50%;
+  left: -3px;
+  top: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
 }
