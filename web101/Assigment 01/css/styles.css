@@ -36,18 +36,17 @@ body {
 
   padding: 40px;
 }
-/* --- */
+/* ---section */
+.section {
+  margin-bottom: 40px;
+}
 .section-title {
   display: block;
   border-bottom: 2px solid black;
   text-transform: uppercase;
 }
-.section {
-  margin-bottom: 40px;
-}
 .section-content {
 }
-
 /* --- */
 .content-box {
   border-bottom: 1px solid rgba(207, 207, 207, 0.514);
@@ -62,15 +61,18 @@ body {
   max-width: 70%;
 }
 
-/* --- */
-
-/* --- */
+/* ---header--- */
+/* avatar */
 .avatar {
   position: absolute;
   width: 150px;
   right: 40px;
   top: 60px;
 }
+.avatar-img {
+  width: 100%;
+}
+/* my info */
 .info-list div {
   display: inline-block;
   margin-bottom: 20px;
@@ -81,6 +83,7 @@ body {
   /* text-transform: up; */
   font-weight: bold;
 }
+/* --- */
 /* ---timeline */
 
 .timeline {
