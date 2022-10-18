@@ -1,0 +1,114 @@
+:root {
+  --main-color: #edf2ff;
+  --main-color-dark: #bac8ff;
+  --bg-color: #343a40;
+  --bg-color-dark: #4950575d;
+  --bg-color-darkblue: #1864ab96;
+  /* --- */
+  --padding-sm-1: 2px;
+  --padding-sm-2: 5px;
+  --padding-sm-3: 8px;
+  --padding-1: 16px;
+  --padding-2: 32px;
+  --padding-3: 48px;
+  --padding-4: 64px;
+  --padding-5: 80px;
+
+  --gap-1: 16px;
+  --gap-2: 32px;
+  --gap-3: 48px;
+
+  --border-sm-1: 2px;
+  --border-sm-2: 4px;
+  --border-sm-3: 6px;
+  --border-1: 18px;
+  --border-2: 12px;
+  --border-3: 16px;
+  --border-4: 24px;
+}
+
+.text-center {
+  text-align: center;
+}
+.description {
+  color: var(--main-color-dark);
+}
+p {
+  color: var(--main-color);
+  font-size: 24px;
+}
+body {
+  background-color: var(--bg-color);
+}
+.container {
+  width: 900px;
+  background-color: var(--bg-color-dark);
+  margin: auto;
+  padding: var(--padding-4);
+}
+.header {
+  margin: auto;
+  color: var(--main-color);
+}
+.header h1 {
+  text-transform: uppercase;
+}
+form {
+  max-width: 700px;
+  background-color: var(--bg-color-darkblue);
+  border-radius: var(--border-3);
+  margin: auto;
+  padding: var(--padding-4);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-2);
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+label {
+  font-size: 24px;
+  color: var(--main-color);
+  padding-bottom: var(--padding-1);
+  display: flex;
+  gap: var(--gap-1);
+}
+input {
+  line-height: 2em;
+  border-radius: var(--border-sm-3);
+  border: none;
+  padding: var(--padding-sm-2);
+  padding-left: var(--padding-sm-3);
+  font-size: 16px;
+}
+.form-control {
+  opacity: 0.9;
+  line-height: 2em;
+  border-radius: var(--border-sm-3);
+  border: none;
+  padding: var(--padding-sm-3);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control option {
+  padding: var(--padding-sm-3);
+  font-size: 16px;
+}
+
+.input-radio,
+.input-checkbox {
+  width: 20px;
+}
+.input-textarea {
+  font-size: 16px;
+}
+.submit-button {
+  border-radius: var(--border-sm-3);
+  padding: var(--padding-1);
+  background-color: #0d375e;
+  color: var(--main-color);
+  border: none;
+  font-size: 24px;
+}
