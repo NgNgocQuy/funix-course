@@ -1,0 +1,23 @@
+@media screen and (max-width: 576px) {
+  .my-banner {
+    height: 80vh;
+  }
+  .my-border {
+    border: none;
+  }
+  .my-nav-title {
+    display: none;
+  }
+  /* about */
+
+  /* certificate */
+  .border-warning {
+    /* border: none !important; */
+  }
+  .my-border-end {
+    border: none;
+  }
+  .mobie-text-hidden {
+    display: none;
+  }
+}
