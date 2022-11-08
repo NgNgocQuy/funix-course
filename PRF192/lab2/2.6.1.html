@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  BMI = mass/[(height)^2)] = mass/(height*height)
+      // (mass tính bằng kg và height tính bằng mét).
+      let data_1 = {
+        mark: {
+          mass: 78,
+          height: 1.69,
+        },
+        john: {
+          mass: 92,
+          height: 1.76,
+        },
+      };
+      let data_2 = {
+        mark: {
+          mass: 95,
+          height: 1.88,
+        },
+        john: {
+          mass: 85,
+          height: 1.76,
+        },
+      };
+      function IBM_result(data) {
+        let mark = data.mark.mass / [data.mark.height ^ 2];
+        let john = data.john.mass / [data.john.height ^ 2];
+        console.log("mark" + mark);
+        console.log("john" + john);
+      }
+    </script>
+  </body>
+</html>

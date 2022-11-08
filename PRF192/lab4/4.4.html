@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const populationWorld = 7900;
+      const percentageOfWorld1 = (population) =>
+        (population / populationWorld) * 100;
+
+      const describePopulation = (country, population) =>
+        `${country} has ${population}} million people, which is about ${percentageOfWorld1(
+          population
+        )}% of the world`;
+      console.log("describePopulation : " + describePopulation("vietnam", 100));
+      console.log("describePopulation : " + describePopulation("lao", 50));
+      console.log("describePopulation : " + describePopulation("italia", 270));
+    </script>
+  </body>
+</html>

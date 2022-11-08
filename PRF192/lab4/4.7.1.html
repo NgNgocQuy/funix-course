@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let dolphins = [
+        [44, 23, 71],
+        [85, 54, 41],
+      ];
+      let koalas = [
+        [65, 54, 49],
+        [23, 34, 27],
+      ];
+      const avg = (data) => {
+        return [
+          [(data[0][0] + data[0][1] + data[0][2]) / 3],
+          [(data[1][0] + data[1][1] + data[1][2]) / 3],
+        ];
+      };
+      let avgDolphins = avg(dolphins);
+      let avgKoalas = avg(koalas);
+      console.log(avgDolphins);
+      console.log(avgKoalas);
+
+      //   checkwinnwe
+      const checkWinner = (data1, data2) => {
+        if (data1 > data2) return "1";
+        else return "2";
+      };
+      console.log(
+        "data 1 " +
+          (checkWinner(avgDolphins[0], avgKoalas[0]) == "1"
+            ? "dolphins winner "
+            : "koalas winner")
+      );
+      console.log(
+        "data 2 " +
+          (checkWinner(avgDolphins[1], avgKoalas[1]) == "2"
+            ? "dolphins winner "
+            : "koalas winner")
+      );
+    </script>
+  </body>
+</html>

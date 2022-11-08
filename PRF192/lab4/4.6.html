@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const populationWorld = 7900;
+      const percentageOfWorld1 = (population) =>
+        (population / populationWorld) * 100;
+
+      let neighbours = ["trung quoc", "lao", "campuchia", "Sweden"];
+
+      neighbours.push("Utopia");
+      console.log(neighbours);
+      let delete_ = neighbours.shift();
+      console.log(delete_);
+      console.log(neighbours);
+
+      console.log(neighbours.indexOf("lao"));
+      console.log(neighbours.indexOf("Germany"));
+
+      neighbours.indexOf("Germany") != -1
+        ? ""
+        : console.log("Probably not a central European country :D");
+
+      neighbours[neighbours.indexOf("Sweden")] = "Republic of Sweden";
+      console.log(neighbours);
+      // let populations = [
+      //   ["trung quoc", 1441],
+      //   ["vietnam", 100],
+      //   ["lao", 50],
+      //   ["italia", 270],
+      // ];
+      // if (populations.length === 4) {
+      //   console.log("array = 4 :" + true);
+      // } else {
+      //   console.log("array = 4 :" + false);
+      // }
+
+      // let percentages = [
+      //   ["trung quoc", percentageOfWorld1(1441)],
+      //   ["vietnam", percentageOfWorld1(100)],
+      //   ["lao", percentageOfWorld1(50)],
+      //   ["italia", percentageOfWorld1(270)],
+      // ];
+      // console.log(percentages);
+      // const describePopulation = (country, population) =>
+      //   `${country} has ${population}} million people, which is about ${percentageOfWorld1(
+      //     population
+      //   )}% of the world`;
+      // console.log("describePopulation : " + describePopulation("vietnam", 100));
+      // console.log("describePopulation : " + describePopulation("lao", 50));
+      // console.log("describePopulation : " + describePopulation("italia", 270));
+    </script>
+  </body>
+</html>

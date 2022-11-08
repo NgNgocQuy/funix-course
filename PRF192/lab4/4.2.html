@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let country = "findland";
+      // let population = 6;
+      // let capitalCity = "Helsinki";
+      // let percentageOfWorld3 = (country, population, capitalCity) => {
+      //   return `${country} has ${population} million people and its capital is ${capitalCity}`;
+      // };
+      // console.log(percentageOfWorld3);
+
+      const populationWorld = 7900; // million
+      function percentageOfWorld1(population) {
+        return (population / populationWorld) * 100;
+      }
+      // 2
+
+      console.log(
+        "trung quoc - % percentageOfWorld1 " + `${percentageOfWorld1(1441)}`
+      );
+
+      // 3
+
+      console.log(
+        "vietnam - percentageOfWorld1 :" + `${percentageOfWorld1(100)}`
+      );
+      console.log("lao - percentageOfWorld1 :" + `${percentageOfWorld1(50)}`);
+      console.log(
+        "italia - percentageOfWorld1 :" + `${percentageOfWorld1(270)}`
+      );
+      // 4
+      let result = function percentageOfWorld2(population) {
+        return (population / populationWorld) * 100;
+      };
+
+      console.log("vietnam - percentageOfWorld2 :" + `${result(100)}`);
+      console.log("lao - percentageOfWorld2 :" + `${result(50)}`);
+      console.log("italia - percentageOfWorld2 :" + `${result(270)}`);
+    </script>
+  </body>
+</html>

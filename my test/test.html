@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .abc {
+        border: 1px solid black;
+        margin: auto;
+        max-width: 1200px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        /* grid-template-columns: repeat(6, 1fr); */
+      }
+
+      .abc img {
+        width: 300px;
+      }
+      /* tablet */
+      @media screen and (max-width: 768px) {
+        .abc {
+          /* grid-template-columns: repeat(2, 1fr); */
+        }
+      }
+      /* mobie */
+      @media screen and (max-width: 564px) {
+        .abc {
+          /* grid-template-columns: 1fr; */
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="abc">
+      <div><img src="./Screenshot (3).png" alt="" /></div>
+      <div><img src="./Screenshot (3).png" alt="" /></div>
+      <div><img src="./Screenshot (3).png" alt="" /></div>
+      <div><img src="./Screenshot (3).png" alt="" /></div>
+      <div><img src="./Screenshot (3).png" alt="" /></div>
+      <div><img src="./Screenshot (3).png" alt="" /></div>
+    </div>
+    <div>
+      <h1>Nguyễn Ngọc Quý</h1>
+      <img
+        src="./Screenshot (3).png"
+        alt=""
+        style="width: 500px; border: 3px solid red; padding: 20px"
+      />
+
+      <ul>
+        <li>
+          <p></p>
+        </li>
+        <li>
+          <p></p>
+        </li>
+        <li>
+          <p></p>
+        </li>
+        <li>
+          <p></p>
+        </li>
+      </ul>
+      <!-- table -->
+      <table>
+        <thead>
+          <th>Lorem, ipsum.</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lorem, ipsum.</td>
+            <td>Lorem, ipsum.</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <!--  -->
+    </div>
+  </body>
+</html>

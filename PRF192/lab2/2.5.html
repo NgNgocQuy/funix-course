@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let country = "viet nam";
+      let continent = "asia";
+      let population = 100000000;
+      let isIsland = false;
+      const language = "vietnamese";
+      console.log(
+        `country : ${country} \n continent : ${continent} \n population : ${population}`
+      );
+      //   console.log("isIsland" + isIsland);
+      console.log("type of data");
+      console.log(`isIsland: ${typeof isIsland} \n
+                    population: ${typeof population} \n
+                    country: ${typeof country} \n
+                    language ${typeof language}
+      `);
+      // 1
+      console.log("c1: " + population / 2);
+      // 2
+      console.log("c2: " + (population + 1));
+      // 3
+      console.log("c3: " + (population > 6000000));
+      // 4
+      console.log("c4: " + (population < 33000000));
+      // 5
+      let description = `
+        country: ${country},
+        population: ${population},
+        language: ${language},
+      `;
+      console.log("c5: " + JSON.stringify(description));
+      // lab2.5
+      console.log("lab2.5 ");
+      if (population >= 33000000) {
+        console.log(country + "s population is above average");
+      } else {
+        console.log(
+          country +
+            " s population is " +
+            (33000000 - population) +
+            " million below average"
+        );
+      }
+      //
+      console.log("lab2.5 , population: 13");
+      population = 13000000;
+      if (population >= 33000000) {
+        console.log(country + "s population is above average");
+      } else {
+        console.log(
+          country +
+            " s population is " +
+            (33000000 - population) +
+            " million below average"
+        );
+      }
+      //
+      console.log("lab2.5 , population: 130");
+      population = 130000000;
+      if (population >= 33000000) {
+        console.log(country + "s population is above average");
+      } else {
+        console.log(
+          country +
+            " s population is " +
+            (33000000 - population) +
+            " million below average"
+        );
+      }
+    </script>
+  </body>
+</html>

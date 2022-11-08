@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const tip = (data) =>
+        data > 50 ? (data < 300 ? data * 0.15 : data * 0.2) : data * 0.2;
+      const total = (data1, data2) => data1 + data2;
+
+      let bills = [125, 555, 44];
+      let tips = [tip(bills[0]), tip(bills[1]), tip(bills[2])];
+      let totals = [
+        total(tips[0], bills[0]),
+        total(tips[1], bills[1]),
+        total(tips[2], bills[2]),
+      ];
+
+      console.log(bills);
+      console.log(tips);
+      console.log(totals);
+    </script>
+  </body>
+</html>
