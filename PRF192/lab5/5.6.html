@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // const populationWorld = 7900;
+      // const percentageOfWorld1 = (population) =>
+      //   (population / populationWorld) * 100;
+      // let populations = [
+      //   ["trung quoc", 1441],
+      //   ["vietnam", 100],
+      //   ["lao", 50],
+      //   ["italia", 270],
+      // ];
+      // const percentages2 = (populations) => {
+      //   let result = [];
+      //   for (let index = 0; index < populations.length; index++) {
+      //     result.push(
+      //       populations[index][0],
+      //       percentageOfWorld1(populations[index][1])
+      //     );
+      //   }
+      //   return result;
+      // };
+      // console.log(percentages2(populations));
+      let listOfNeighbours = [
+        ["Canada", "Mexico"],
+        ["Spain"],
+        ["Norway", "Sweden", "Russia"],
+      ];
+      for (let index = 0; index < listOfNeighbours.length; index++) {
+        for (
+          let index2 = 0;
+          index2 < listOfNeighbours[index].length;
+          index2++
+        ) {
+          const element = listOfNeighbours[index][index2];
+          console.log("neighbours : " + element);
+        }
+      }
+    </script>
+  </body>
+</html>

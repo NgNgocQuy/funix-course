@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, green, greenyellow);
+}
+.btn {
+  margin: 100px 200px;
+  padding: 16px;
+  background-color: aliceblue;
+  box-shadow: 2 2 2 2 aliceblue;
+  font-size: 2rem;
+}

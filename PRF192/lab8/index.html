@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- link -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="flex">
+        <div class="show_modal">show modal 1</div>
+        <div class="show_modal">show modal 2</div>
+        <div class="show_modal">show modal 3</div>
+      </div>
+    </div>
+    <!-- overlay -->
+    <div class="overlay hidden"></div>
+    <!-- modal -->
+    <div class="modal hidden">
+      <div class="close_btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+      <div class="content">
+        <h2>I m modal !</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque
+          ratione exercitationem, quos delectus minus aspernatur vitae? Harum
+          facere esse ab ratione quis porro nemo natus rerum eaque. Fuga, est
+          pariatur.
+        </p>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>

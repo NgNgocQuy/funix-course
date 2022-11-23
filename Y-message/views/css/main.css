@@ -1,0 +1,51 @@
+:root {
+  --main-color: #f1f3f5;
+  --item-color: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 0.3px solid green; */
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: var(--main-color);
+}
+/* gap sytem */
+._gap-0-25 {
+  gap: 4px;
+}
+._gap-0-5 {
+  gap: 8px;
+}
+._gap-1 {
+  gap: 16px;
+}
+._gap-1-5 {
+  gap: 24px;
+}
+._gap-2 {
+  gap: 32px;
+}
+/*  */
+._default-height {
+  height: 100vh;
+}
+._default-width {
+  width: 100vw;
+}
+
+/* --------------------------------------------------------------------------- */
+
+._user-icon {
+  width: 54px;
+  width: 54px;
+}
+
+._control-icon {
+  width: 32px;
+  width: 32px;
+}

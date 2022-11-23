@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="bg-dark" id="main">
+    <div
+      class="container text-light border border-light"
+      style="margin-top: 40px; padding: 0"
+    >
+      <div class="d-flex justify-content-between" style="margin-bottom: 50px">
+        <button id="again" class="btn btn-light">again</button>
+        <div>
+          <p>Lorem ipsum dolor sit.</p>
+        </div>
+      </div>
+
+      <div
+        class="d-flex flex-column justify-content-between"
+        style="height: 500px"
+      >
+        <div class="col-12" style="height: 100px">
+          <h1 class="text-center">Guess My Number!</h1>
+        </div>
+
+        <div class="d-flex justify-content-center position-relative">
+          <div
+            class="position-absolute bg-light"
+            style="width: 100%; height: 5px; top: 50%; z-index: -1"
+          ></div>
+          <div class="bg-light" style="display: inline-block; padding: 16px">
+            <h1
+              id="goas"
+              style="width: 40px; height: 40px"
+              class="text-dark text-center"
+            >
+              ?
+            </h1>
+            <!-- <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 320 512"
+              style="width: 50px; height: 50px"
+            >
+              <path
+                d="M96 96c-17.7 0-32 14.3-32 32s-14.3 32-32 32s-32-14.3-32-32C0 75 43 32 96 32h97c70.1 0 127 56.9 127 127c0 52.4-32.2 99.4-81 118.4l-63 24.5 0 18.1c0 17.7-14.3 32-32 32s-32-14.3-32-32V301.9c0-26.4 16.2-50.1 40.8-59.6l63-24.5C240 208.3 256 185 256 159c0-34.8-28.2-63-63-63H96zm48 384c-22.1 0-40-17.9-40-40s17.9-40 40-40s40 17.9 40 40s-17.9 40-40 40z"
+              />
+            </svg> -->
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-around" style="height: 150px">
+          <div class="d-flex flex-column justify-content-around">
+            <!-- value -->
+            <input
+              type="number"
+              id="guess"
+              value=""
+              style="width: 200px; height: 60px; font-size: 32px"
+              class="bg-dark border border-light border-4 text-light text-center"
+            />
+            <!-- check -->
+            <div id="check" class="btn btn-light text-dark">check!</div>
+          </div>
+          <div class="d-flex flex-column justify-content-around">
+            <!-- start -->
+            <h4 id="start">start guessing...</h4>
+            <div>
+              <!-- score -->
+              <h4>score: <span id="score">20</span></h4>
+              <!-- hight score -->
+              <h4>hight score: <span id="hightScore"></span></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

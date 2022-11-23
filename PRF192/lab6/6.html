@@ -1,0 +1,25 @@
+!<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=  device-width  , initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let arr1 = [17, 21, 23];
+      let arr2 = [12, 5, -5, 0, 4];
+
+      const printForecast = (data) => {
+        console.log(`${data.temp}ºC in ${data.day} day `);
+      };
+      for (let index = 0; index < arr1.length; index++) {
+        printForecast({ temp: arr1[index], day: index + 1 });
+      }
+      for (let index = 0; index < arr2.length; index++) {
+        printForecast({ temp: arr2[index], day: index + 1 });
+      }
+    </script>
+  </body>
+</html>

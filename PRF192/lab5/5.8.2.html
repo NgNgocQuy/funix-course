@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const calcTip = (data) =>
+        data > 50 ? (data < 300 ? data * 0.15 : data * 0.2) : data * 0.2;
+      let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+      let tip = [];
+      let total = [];
+      let counts = 0;
+      for (let counts = 0; counts < bills.length; counts++) {
+        tip.push(calcTip(bills[counts]));
+        total.push(tip[counts] + bills[counts]);
+      }
+      console.log(tip, counts);
+    </script>
+  </body>
+</html>

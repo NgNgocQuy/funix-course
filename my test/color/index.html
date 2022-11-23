@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Show a Color Picker</h1>
+
+    <form action="/action_page.php">
+      <label for="favcolor">Select your favorite color:</label>
+      <input
+        type="color"
+        id="favcolor"
+        name="favcolor"
+        value="#ff0000"
+      /><br /><br />
+    </form>
+    <button id="a">send</button>
+
+    <div id="abc">0</div>
+
+    <script>
+      document.getElementById("a").addEventListener("click", function (e) {
+        document.getElementById("abc").innerHTML =
+          document.getElementById("favcolor").value;
+      });
+    </script>
+  </body>
+</html>

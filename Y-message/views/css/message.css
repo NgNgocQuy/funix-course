@@ -1,0 +1,16 @@
+/* --------------------------------------------------------------------------- */
+/*  xs <576px	sm ≥576px	md ≥768px	lg ≥992px	xl ≥1200px	xxl ≥1400px */
+._nav {
+  width: 380px;
+  height: 100vh;
+}
+
+/* @media screen and (max-width: 576px) {
+  ._nav {
+    width: 100%;
+  }
+} */
+
+._content {
+  width: calc(100% - 380px);
+}
