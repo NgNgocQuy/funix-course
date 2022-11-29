@@ -38,6 +38,7 @@ let dataList = [
     date: new Date("2022-03-02"),
   },
 ]; // pet list
+console.log(dataList);
 // Bắt sự kiện Click vào nút "Submit"
 const idInput = document.getElementById("input-id");
 const nameInput = document.getElementById("input-name");
@@ -218,6 +219,7 @@ function addRow(params, index) {
     row.insertCell(11).innerHTML = `${params.BMI}`; //
   } else row.insertCell(11).innerHTML = `?`; //
 }
+// console.log(typeof dataList[0].date);
 // reload table
 function renderTableData() {
   console.log("reloadTable -- ");
@@ -268,20 +270,13 @@ function showHealthyPet() {
       obj.sterilized === true
     );
   });
-  document.getElementById("tbody").innerHTML = "";
-  for (let index = 0; index < newdata.length; index++) {
-    addRow(newdata[index], index);
-  }
+  renderTableData(newdata);
 }
 
 function showAllPet() {
   allBtn.classList.toggle("hidden");
   healthyBtn.classList.toggle("hidden");
-  let newdata = dataList;
-  document.getElementById("tbody").innerHTML = "";
-  for (let index = 0; index < newdata.length; index++) {
-    addRow(newdata[index], index);
-  }
+  renderTableData(dataList);
 }
 
 // -----------------(Nâng cao) Tính toán chỉ số BMI

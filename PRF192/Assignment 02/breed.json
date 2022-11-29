@@ -1,0 +1,13 @@
+[
+  { "breed": "Tabby", "type": "Cat" },
+  { "breed": "Domestic Medium Hair", "type": "Dog" },
+  { "breed": "Mixed Breed", "type": "Cat" },
+  { "breed": "Mixed Breed", "type": "Dog" },
+  { "breed": "Domestic Short Hair", "type": "Cat" },
+  { "breed": "Domestic Short Hair", "type": "Dog" },
+  { "breed": "Terrier", "type": "Dog" },
+  { "breed": "Greyhound", "type": "Dog" },
+  { "breed": "Rottweiler", "type": "Cat" },
+  { "breed": "Persian", "type": "Cat" },
+  { "breed": "goden", "type": "Dog" }
+]

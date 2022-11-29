@@ -1,0 +1,10 @@
+    Thêm animation trên sidebar
+    
+    Lưu trữ giữ liệu vào LocalStorage
+    
+    Chức năng Edit để chỉnh sửa thông tin của thú cưng
+    
+    Chức năng Search để tìm kiếm thú cưng
+    
+    Chức năng Breed để quản lý các giống của thú cưng
+
