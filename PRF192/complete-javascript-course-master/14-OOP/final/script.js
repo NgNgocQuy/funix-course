@@ -1,6 +1,5 @@
 'use strict';
 
-/*
 ///////////////////////////////////////
 // Constructor Functions and the new Operator
 const Person = function (firstName, birthYear) {
@@ -59,7 +58,6 @@ console.log(jonas.species, matilda.species);
 console.log(jonas.hasOwnProperty('firstName'));
 console.log(jonas.hasOwnProperty('species'));
 
-
 ///////////////////////////////////////
 // Prototypal Inheritance on Built-In Objects
 console.log(jonas.__proto__);
@@ -83,7 +81,6 @@ console.log(arr.unique());
 
 const h1 = document.querySelector('h1');
 console.dir(x => x + 1);
-*/
 
 ///////////////////////////////////////
 // Coding Challenge #1
@@ -100,7 +97,6 @@ DATA CAR 2: 'Mercedes' going at 95 km/h
 GOOD LUCK 😀
 */
 
-/*
 const Car = function (make, speed) {
   this.make = make;
   this.speed = speed;
@@ -123,7 +119,6 @@ bmw.accelerate();
 bmw.accelerate();
 bmw.brake();
 bmw.accelerate();
-
 
 ///////////////////////////////////////
 // ES6 Classes
@@ -188,7 +183,6 @@ jessica.greet();
 const walter = new PersonCl('Walter White', 1965);
 // PersonCl.hey();
 
-
 ///////////////////////////////////////
 // Setters and Getters
 const account = {
@@ -208,7 +202,6 @@ console.log(account.latest);
 
 account.latest = 50;
 console.log(account.movements);
-
 
 ///////////////////////////////////////
 // Object.create
@@ -234,7 +227,6 @@ console.log(steven.__proto__ === PersonProto);
 const sarah = Object.create(PersonProto);
 sarah.init('Sarah', 1979);
 sarah.calcAge();
-*/
 
 ///////////////////////////////////////
 // Coding Challenge #2
@@ -250,7 +242,6 @@ DATA CAR 1: 'Ford' going at 120 km/h
 GOOD LUCK 😀
 */
 
-/*
 class CarCl {
   constructor(make, speed) {
     this.make = make;
@@ -283,7 +274,6 @@ ford.accelerate();
 ford.brake();
 ford.speedUS = 50;
 console.log(ford);
-
 
 ///////////////////////////////////////
 // Inheritance Between "Classes": Constructor Functions
@@ -322,7 +312,6 @@ console.log(mike instanceof Object);
 
 Student.prototype.constructor = Student;
 console.dir(Student.prototype.constructor);
-*/
 
 ///////////////////////////////////////
 // Coding Challenge #3
@@ -338,7 +327,6 @@ DATA CAR 1: 'Tesla' going at 120 km/h, with a charge of 23%
 GOOD LUCK 😀
 */
 
-/*
 const Car = function (make, speed) {
   this.make = make;
   this.speed = speed;
@@ -379,7 +367,6 @@ tesla.chargeBattery(90);
 console.log(tesla);
 tesla.brake();
 tesla.accelerate();
-
 
 ///////////////////////////////////////
 // Inheritance Between "Classes": ES6 Classes
@@ -444,7 +431,6 @@ const martha = new StudentCl('Martha Jones', 2012, 'Computer Science');
 martha.introduce();
 martha.calcAge();
 
-
 ///////////////////////////////////////
 // Inheritance Between "Classes": Object.create
 
@@ -470,7 +456,7 @@ StudentProto.init = function (firstName, birthYear, course) {
 StudentProto.introduce = function () {
   // BUG in video:
   // console.log(`My name is ${this.fullName} and I study ${this.course}`);
-  
+
   // FIX:
   console.log(`My name is ${this.firstName} and I study ${this.course}`);
 };
@@ -479,7 +465,6 @@ const jay = Object.create(StudentProto);
 jay.init('Jay', 2010, 'Computer Science');
 jay.introduce();
 jay.calcAge();
-
 
 ///////////////////////////////////////
 // Encapsulation: Protected Properties and Methods
@@ -568,7 +553,6 @@ Account.helper();
 // Chaining
 acc1.deposit(300).deposit(500).withdraw(35).requestLoan(25000).withdraw(4000);
 console.log(acc1.getMovements());
-*/
 
 ///////////////////////////////////////
 // Coding Challenge #4
@@ -583,7 +567,6 @@ DATA CAR 1: 'Rivian' going at 120 km/h, with a charge of 23%
 GOOD LUCK 😀
 */
 
-/*
 class CarCl {
   constructor(make, speed) {
     this.make = make;
@@ -647,4 +630,3 @@ rivian
   .accelerate();
 
 console.log(rivian.speedUS);
-*/

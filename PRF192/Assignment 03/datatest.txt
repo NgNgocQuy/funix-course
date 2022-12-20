@@ -1,0 +1,56 @@
+CURRENT_USER :
+[
+    {
+        "firstName": "2",
+        "lastName": "2",
+        "username": "2",
+        "password": "abc@123"
+    }
+]
+
+-----------------------------
+TASK_ARRAY (todo list)
+[
+    {
+        "id": 1671490602137,
+        "task": "beos",
+        "owner": "2",
+        "isDone": false
+    }
+]
+
+-----------------------------
+SETTING_USER
+[
+    {
+        "category": "Sports",
+        "pageSize": "12",
+        "username": "quys"
+    },
+    {
+        "category": "Technology",
+        "pageSize": "3",
+        "username": "2"
+    }
+]
+
+-----------------------------
+USER_ARRAY
+[
+    {
+        "firstName": "2",
+        "lastName": "2",
+        "username": "2",
+        "password": "abc@123"
+    },
+    {
+        "firstName": "quys",
+        "lastName": "nguyen",
+        "username": "quys",
+        "password": "abc@123"
+    }
+]
+
+-----------------------------
+-----------------------------
+-----------------------------
