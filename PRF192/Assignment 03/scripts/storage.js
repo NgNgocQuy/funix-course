@@ -1,16 +1,16 @@
 "use strict";
-// danh sach user
+//  user list
 let UserList = [];
-// danh sach todo task
+//  todo task
 let taskList = [];
-// user hien tai dang login
+//  current user
 let currentUser;
 
 let settingUser = [];
 // ---hàm event -----------------------------------------------
-// load danh sách user
-// load USER_ARRAY từ localStorage
-// trả về UserList
+// load userList
+// load USER_ARRAY from localStorage
+// push to UserList
 function loadLocalStorage() {
   let ValueLocalStorage = localStorage.getItem("USER_ARRAY");
   if (checkValueLocalStorage(ValueLocalStorage)) {
@@ -18,9 +18,8 @@ function loadLocalStorage() {
   } else console.log("Storage.js : No data in LocalStorage");
 }
 
-// load user hiện tại
-// load CURRENT_USER từ localStorage
-// trả về currentUser
+// load CURRENT_USER from localStorage
+// push to currentUser
 function loadCurrentUser() {
   let ValueCurrentUser = localStorage.getItem("CURRENT_USER");
   console.log(typeof ValueCurrentUser);
@@ -29,9 +28,9 @@ function loadCurrentUser() {
   } else console.log("Storage.js : no current user");
 }
 
-// load taskList (todo) for user hiện tại
-// load TASK_ARRAY từ localStorage
-// trả về taskList
+// load taskList (todo)
+// load TASK_ARRAY from localStorage
+// push to taskList
 function loadTaksList() {
   let ValueLocalStorage = localStorage.getItem("TASK_ARRAY");
   if (checkValueLocalStorage(ValueLocalStorage)) {
@@ -39,9 +38,9 @@ function loadTaksList() {
   } else console.log("Storage.js : empty taskList");
 }
 
-// load setting cho user hiện tại
+// load setting
 // load SETTING_USER từ localStorage
-// trả về setting
+// push to settingUser
 function loadSettingUser() {
   let ValueLocalStorage = localStorage.getItem("SETTING_USER");
   if (checkValueLocalStorage(ValueLocalStorage)) {
@@ -56,16 +55,15 @@ function saveToStorage(key, value) {
   console.log("Storage.js: saved ", key, " ; ", value);
 }
 
-// hàm phụ trợ --------------------------------------------
-//  - kiểm tra localStorage có dữ liệu tồn tại
-// trả về false nếu mảng trống
+// support --------------------------------------------
+// return false if empy arr
 function checkValueLocalStorage(params) {
   //
   return params !== "" && params !== null && params !== undefined
     ? true
     : false;
 }
-// xóa trong localStorage
+// del user localStorage
 function deleteUser(keyValue) {
   console.log("delete user : " + keyValue);
   if (confirm("Are you sure?")) {
@@ -76,13 +74,13 @@ function deleteUser(keyValue) {
   }
 }
 
-// xóa trong localStorage
+// del current user localStorage
 function deleteCurrentUser() {
   console.log("delete current user : " + currentUser);
   localStorage.removeItem("CURRENT_USER");
 }
 
-// tìm user trong UserList
+// return current user in UserList
 function filterUser(userName, password) {
   return UserList.filter((e) => {
     return e.username == userName && e.password == password;

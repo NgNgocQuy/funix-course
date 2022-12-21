@@ -2,11 +2,12 @@
 // ./pages/storage.js -------------------------------
 
 function loadpage() {
-  // lấy USER_ARRAY từ localStorage
-  // lưu vào mảng UserList = []
+  // load USER_ARRAY from localStorage
+  // save to array: UserList = []
   loadLocalStorage();
-  // kiểm tra user có đang login
-  // lấy CURRENT_USER từ localStorage
+
+  // load CURENT_USER from localStorage
+  // save to array: CurentUser = []
   loadCurrentUser();
   console.log(UserList);
   console.log(currentUser);

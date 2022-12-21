@@ -12,16 +12,20 @@ let cardList = [];
 // ./pages/storage.js -------------------------------
 
 function loadpage() {
-  // lấy USER_ARRAY từ localStorage
-  // lưu vào mảng UserList = []
+  // load USER_ARRAY from localStorage
+  // save to array: UserList = []
   loadLocalStorage();
-  // kiểm tra user có đang login
-  // lấy CURRENT_USER từ localStorage
+
+  // load CURENT_USER from localStorage
+  // save to array: CurentUser = []
   loadCurrentUser();
 
+  // load SETTING_USER from localStorage
+  // save to array: SettingUser = []
   loadSettingUser();
 
   try {
+    // get setting of currentUser in settingUser list
     settingUser.filter((e) => {
       if (e.username == currentUser[0].username) {
         settingCurrentUser.category = e.category;
@@ -168,14 +172,19 @@ function navigationContent(totalResults, pageSize, page) {
     // disabled "Prev" navigation
     btnPrev.parentNode.classList.add(`disabled`);
     try {
+      // fix bug
       // try remove disabled of "next"
-      btnNext.parentNode.classList.remove(`disabled`);
+      if (totalResults / pageSize < page /** maxPage <= currentPage */)
+        // last page is current page
+        // disabled Next navigation
+        btnNext.parentNode.classList.add(`disabled`);
+      else btnNext.parentNode.classList.remove(`disabled`);
     } catch (error) {
       /** ... */
     }
   }
   // change if last page is current page
-  if (totalResults / pageSize <= page /** maxPage <= currentPage */) {
+  else if (totalResults / pageSize < page /** maxPage <= currentPage */) {
     // last page is current page
     // disabled Next navigation
     btnNext.parentNode.classList.add(`disabled`);
