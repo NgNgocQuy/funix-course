@@ -60,8 +60,10 @@ function saveToStorage(key, value) {
 //  - kiểm tra localStorage có dữ liệu tồn tại
 // trả về false nếu mảng trống
 function checkValueLocalStorage(params) {
-  if (params !== "" && params !== null && params !== undefined) return true;
-  return false;
+  //
+  return params !== "" && params !== null && params !== undefined
+    ? true
+    : false;
 }
 // xóa trong localStorage
 function deleteUser(keyValue) {

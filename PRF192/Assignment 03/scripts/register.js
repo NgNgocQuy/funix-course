@@ -1,19 +1,12 @@
 "use strict";
 
-const firstName = document.getElementById("input-firstname");
-const lastName = document.getElementById("input-lastname");
-const userName = document.getElementById("input-username");
-const password = document.getElementById("input-password");
-const confirmPassword = document.getElementById("input-password-confirm");
-
-const btnSubmit = document.getElementById("btn-submit");
-
 // ./pages/storage.js -------------------------------
 function loadpage() {
   // lấy USER_ARRAY từ localStorage
   // lưu vào mảng UserList = []
   loadLocalStorage();
 
+  // ...
   // kiểm tra user có đang login
   // lấy CURRENT_USER từ localStorage
   //   if (loadCurrentUser() != "") {
@@ -24,14 +17,25 @@ function loadpage() {
 
 loadpage();
 
+// input
+const firstName = document.getElementById("input-firstname");
+const lastName = document.getElementById("input-lastname");
+const userName = document.getElementById("input-username");
+const password = document.getElementById("input-password");
+const confirmPassword = document.getElementById("input-password-confirm");
+
+// submit btn
+const btnSubmit = document.getElementById("btn-submit");
+// ...
 function loginSuccess() {
   console.log("login Success");
 }
-// lắng nghe sự kiện submit từ người dùng
-// xử lý giữ liệu đầu vào
-// tạo model, gọi hàm ,lưu dữ liệu người dùng
+
+// listen to event submit from user
+// validate input value
+// create user model, update userList
 btnSubmit.addEventListener("click", () => {
-  // validate
+  // create new user
   if (
     checkInput(
       firstName.value,
@@ -39,24 +43,26 @@ btnSubmit.addEventListener("click", () => {
       userName.value,
       password.value
     ) == true
+    /** validate */
   ) {
-    // create
+    // create user
     let newUser = new User(
       firstName.value,
       lastName.value,
       userName.value,
       password.value
     );
+
     // add to UserList[]
     UserList.push(newUser);
     // save storage
     saveToStorage("USER_ARRAY", UserList);
     // move to home
     alert("tạo tài khoản thành công. ");
-    window.location.href = "../pages/login.html";
+    window.location.href = "../index.html";
   }
 });
-// kiểm tra dữ liệu nhập vào từ input
+// validate data input
 const checkInput = (firstName, lastName, userName, password) => {
   switch (true) {
     // name
@@ -91,7 +97,7 @@ const checkInput = (firstName, lastName, userName, password) => {
   }
 };
 
-// trả về lỗi dưới phần tử input theo id
+// return message to under input element
 function errMessage(idElement, text) {
   let errInput = document.getElementById(`${idElement}`);
   errInput.style.color = "red";

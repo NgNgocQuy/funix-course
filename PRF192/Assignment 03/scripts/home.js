@@ -26,7 +26,8 @@ function loadpage() {
 }
 loadpage();
 
+// delete current user
 document.getElementById("btn-logout").addEventListener("click", function (e) {
   deleteCurrentUser();
-  window.location.href = "./pages/login.html";
+  window.location.href = "./index.html";
 });

@@ -1,34 +1,14 @@
 "use strict";
 
+// default value for setting news if user add setting not yet
 let settingCurrentUser = {
   category: "technology",
   pageSize: "20",
 };
-const newsContainer = document.getElementById("news-container");
 
-const btnNext = document.getElementById("btn-next");
-const btnPrev = document.getElementById("btn-prev");
-const pageNum = document.getElementById("page-num");
-const btnSearch = document.getElementById("btn-search-submit");
+let cardList = [];
 
-const inputSearch = document.getElementById("input-search");
-
-btnSearch.addEventListener("click", function (e) {
-  if (inputSearch.value != "") {
-    loadContent("gb", 1, inputSearch.value);
-  } else {
-    alert("hmm.. bạn cần nhập một cái gì đó");
-  }
-});
-
-btnNext.addEventListener("click", function (e) {
-  console.log("next", e);
-  loadContent("gb", e.target.value, inputSearch.value);
-});
-btnPrev.addEventListener("click", function (e) {
-  console.log("prev", e);
-  loadContent("gb", e.target.value, inputSearch.value);
-});
+//---------------------------------------------------
 // ./pages/storage.js -------------------------------
 
 function loadpage() {
@@ -68,12 +48,48 @@ function loadpage() {
   }
 }
 loadpage();
-/*
-https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=d334ff5aafda4e82b4e42a3a3a8f6e52
-*/
 
-let cartList = [];
+//---------------------------------------------------
+//---------------------------------------------------
 
+// element content
+const newsContainer = document.getElementById("news-container");
+
+// navigation page
+const btnNext = document.getElementById("btn-next");
+const btnPrev = document.getElementById("btn-prev");
+const pageNum = document.getElementById("page-num");
+
+// search
+const btnSearch = document.getElementById("btn-search-submit");
+const inputSearch = document.getElementById("input-search");
+
+// search
+btnSearch.addEventListener("click", function (e) {
+  // fetch data with input value
+  if (inputSearch.value != "") {
+    loadContent("gb", 1, inputSearch.value); // ("country","page", "query")
+  } else {
+    alert("hmm.. bạn cần nhập một cái gì đó");
+    // cardList.map();
+  }
+});
+
+// navigation NEXT
+btnNext.addEventListener("click", function (e) {
+  console.log("next", e);
+  loadContent("gb", e.target.value, inputSearch.value); // ("country","page", "query")
+});
+// navigation PREV
+btnPrev.addEventListener("click", function (e) {
+  console.log("prev", e);
+  loadContent("gb", e.target.value, inputSearch.value); // ("country","page", "query")
+});
+
+//---------------------------------------------------
+//---------------------------------------------------
+
+// ...
 async function wait(second) {
   return await new Promise((rel) => setTimeout(rel, second * 1000));
 }
@@ -85,6 +101,12 @@ function loading() {
   `;
 }
 
+// --------------------------------------------------
+// --------------------------------------------------
+/*
+https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=d334ff5aafda4e82b4e42a3a3a8f6e52
+*/
+// fetch API
 const getJSON = async function (url) {
   try {
     const res = await fetch(url, {
@@ -96,27 +118,38 @@ const getJSON = async function (url) {
     console.log(err);
   }
 };
-
+// validate and call fetch API function
+// load ta data to page
 async function loadContent(country, page, query) {
-  loading(); // animation loading
+  loading(); //... animation loading
+
+  // set default query to "" if query is undefined
   if (query != "") query = `q=${query}&`;
 
+  //call fuction fetch data
+  // save to "res" params
   const res = await getJSON(
+    // query : search
+    // category: "settingCurrentUser.category" - in localStorage - storage.js
+    // pageSize: "settingCurrentUser.pageSize" - in localStorage - storage.js
+    // page: navigation page
     `https://newsapi.org/v2/top-headlines?${query}country=${country}&category=${settingCurrentUser.category}&pageSize=${settingCurrentUser.pageSize}&page=${page}&apiKey=d334ff5aafda4e82b4e42a3a3a8f6e52`
   );
+
+  // using data response
   try {
-    cartList = res.articles.map((e) => e);
-    if (cartList.length != 0) {
-      await wait(1);
-      newsContainer.innerHTML = "";
-      await addNameCategory(settingCurrentUser.category);
+    cardList = res.articles.map((e) => e); // save to array
+    // show data to page
+    if (cardList.length != 0 /** array not empty*/) {
+      await wait(1); //...
+      newsContainer.innerHTML = ""; //...
+      await addNameCategory(settingCurrentUser.category); //... show category of data
       console.log("response json : ", res);
-      // thêm một trường vào news-container
-      cartList.map((e) => addCart(e));
-      // điều khiển trạng thái cho next - previous
-      navigationContent(res.totalResults, settingCurrentUser.pageSize, page);
-      /*
-       */
+
+      // add row to news-container
+      cardList.map((e) => addCard(e));
+      // change status of next - previous element Navigation page
+      navigationContent(res.totalResults, settingCurrentUser.pageSize, page); // (res.totalResults , curent Setting, current page)
     } else
       newsContainer.innerHTML = `
             <div class="d-flex justify-content-center mt-3"> 
@@ -124,34 +157,44 @@ async function loadContent(country, page, query) {
             </div>
         `;
   } catch (error) {
-    console.log("something error");
+    console.log("something error: ", error);
   }
 }
-//
+
+// change show navigation page
 function navigationContent(totalResults, pageSize, page) {
-  if (page == 1) {
-    // disabled Prev navigation
+  // change status of navigation
+  if (page == 1 /** first page */) {
+    // disabled "Prev" navigation
     btnPrev.parentNode.classList.add(`disabled`);
     try {
+      // try remove disabled of "next"
       btnNext.parentNode.classList.remove(`disabled`);
-    } catch (error) {}
+    } catch (error) {
+      /** ... */
+    }
   }
-  if (totalResults / pageSize <= page) {
-    // kiểm tra số trang tối đa có trùng số trang hiện tại
+  // change if last page is current page
+  if (totalResults / pageSize <= page /** maxPage <= currentPage */) {
+    // last page is current page
     // disabled Next navigation
     btnNext.parentNode.classList.add(`disabled`);
     try {
+      // fix bug of prev navigation
+      // remove if page not is first page
       if (page != 1) btnPrev.parentNode.classList.remove(`disabled`);
     } catch (error) {}
   } else {
-    // xóa trạng thái disabled cho navigation
+    // fix
+    // remove disabled of navigation "if not true ..."
     try {
       btnPrev.parentNode.classList.remove(`disabled`);
       btnNext.parentNode.classList.remove(`disabled`);
     } catch (error) {}
   }
-  // gán value cho navigation
-  //   value này sẽ được sử dụng làm đối số cho event next , prev
+
+  // assign value for navigation
+  // value is use for  next and prev event
   btnPrev.value = `${Number(page) - 1}`;
   //
   btnNext.value = `${Number(page) + 1}`;
@@ -159,7 +202,7 @@ function navigationContent(totalResults, pageSize, page) {
   pageNum.innerHTML = `${page}`;
 }
 
-// hiển thị tên category
+// show name of category
 async function addNameCategory(params) {
   let categoryElement = document.createElement("h6");
   categoryElement.classList.add("p-3", "flex-row", "flex-wrap");
@@ -168,8 +211,9 @@ async function addNameCategory(params) {
       `;
   newsContainer.appendChild(categoryElement);
 }
-// thêm một card cho news-container
-async function addCart(params) {
+
+// add card to news-container
+async function addCard(params) {
   let card = document.createElement("div");
   card.classList.add("card", "flex-row", "flex-wrap");
   card.innerHTML = `
@@ -203,4 +247,4 @@ async function addCart(params) {
   newsContainer.appendChild(card);
 }
 
-loadContent("gb", 1, inputSearch.value);
+loadContent("gb", 1, inputSearch.value); // default load on page loaded

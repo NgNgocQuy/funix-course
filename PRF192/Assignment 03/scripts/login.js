@@ -1,8 +1,8 @@
 "use strict";
-
+// input
 const userName = document.getElementById("input-username");
 const password = document.getElementById("input-password");
-
+// submit btn
 const btnSubmit = document.getElementById("btn-submit");
 
 // ./pages/storage.js -------------------------------
@@ -29,12 +29,12 @@ function loadpage() {
 loadpage();
 
 // -------------------------------------------
-// lắng nghe sự kiện submit từ người dùng
-// xử lý giữ liệu đầu vào
-// tạo model, gọi hàm ,lưu dữ liệu người dùng
+// listen to event submit from user
+// validate input value
+// create user model, update userList
 btnSubmit.addEventListener("click", () => {
-  // validate
-  if (checkInput(userName.value, password.value) == true) {
+  // login user and blank to home page
+  if (checkInput(userName.value, password.value) == true /** validate */) {
     // add currentUser
     currentUser = filterUser(userName.value, password.value);
     console.log(currentUser);
@@ -48,7 +48,7 @@ btnSubmit.addEventListener("click", () => {
   }
 });
 
-// kiểm tra dữ liệu nhập vào từ input
+// validate input
 const checkInput = (userName, password) => {
   switch (true) {
     // username
@@ -66,7 +66,7 @@ const checkInput = (userName, password) => {
   }
 };
 
-// trả về lỗi dưới phần tử input theo id
+// return message to under input element
 function errMessage(idElement, text) {
   let errInput = document.getElementById(`${idElement}`);
   errInput.style.color = "red";
